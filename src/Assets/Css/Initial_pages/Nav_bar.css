@@ -1,0 +1,22 @@
+.Nav_desktop_div{
+    display: block;
+}
+
+.Nav_mobile_div{
+    display: none;
+}
+
+
+@media (max-width:950px){
+
+    .Nav_desktop_div{
+        display: none;
+    }
+    
+    .Nav_mobile_div{
+        display: block;
+    }
+    
+    
+ 
+  }
