@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/davnet/static/css/main.7c1677ca.css",
+    "main.js": "/davnet/static/js/main.6f339c15.js",
+    "static/media/home-vid.mov": "/davnet/static/media/home-vid.6ba5e207ecc3fcc914dc.mov",
+    "static/media/who_img2.JPG": "/davnet/static/media/who_img2.352e8ca9ee937722c1a3.JPG",
+    "static/media/home_slider4.png": "/davnet/static/media/home_slider4.1d0422e0ef6dc9a0c197.png",
+    "static/media/home_slider3.png": "/davnet/static/media/home_slider3.56ad4d7ac003abe5fc71.png",
+    "static/media/who_img1.png": "/davnet/static/media/who_img1.8933351ba2d2ff23be95.png",
+    "static/media/home_slider1.png": "/davnet/static/media/home_slider1.db2de660b35f73724afb.png",
+    "static/media/home_slider2.png": "/davnet/static/media/home_slider2.4d6615bf62ff3c4f3e0e.png",
+    "static/media/product4.jpg": "/davnet/static/media/product4.e777b73331ef91ad4573.jpg",
+    "static/media/product3.jpg": "/davnet/static/media/product3.06840b92825ec4552f59.jpg",
+    "static/media/Logo.png": "/davnet/static/media/Logo.2b21626a21ecb1a79131.png",
+    "static/media/product7.jpg": "/davnet/static/media/product7.a64fda304280b4696dfe.jpg",
+    "static/media/product2.jpg": "/davnet/static/media/product2.40b4910c437d6102a877.jpg",
+    "static/media/product6.jpg": "/davnet/static/media/product6.7918ced2123c29efc9ef.jpg",
+    "static/media/product5.jpg": "/davnet/static/media/product5.07e2198b1f85d7a20636.jpg",
+    "static/media/product1.jpg": "/davnet/static/media/product1.90cd56271ec0a1be6e62.jpg",
+    "index.html": "/davnet/index.html",
+    "main.7c1677ca.css.map": "/davnet/static/css/main.7c1677ca.css.map",
+    "main.6f339c15.js.map": "/davnet/static/js/main.6f339c15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c1677ca.css",
+    "static/js/main.6f339c15.js"
+  ]
+}
