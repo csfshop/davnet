@@ -102,4 +102,99 @@ flipContainer.addEventListener('touchend', (e) => {
 
 
 
+
+
+
+
+
+
+// number counts
+
+let allValues = document.querySelectorAll(".home_counter_value");
+
+// Start the forEach loop for displaying the values
+function home_count_fn(){
+  allValues.forEach((singleValue) => {
+  let startValue = 0;
+  let endValue = parseInt(singleValue.getAttribute("data-value"));
+  let duration = Math.floor(2000 / endValue);
+
+  // Counter for increaing the values & display
+  let counter = setInterval(function () {
+    startValue += 1;
+    singleValue.textContent = startValue;
+    // Clearing the interval
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
+}
+
+// 1. Grab all the elements you want to watch
+    const boxes = document.querySelectorAll('.home_counts_div');
+
+    // 2. Create the observer
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+         
+          console.log('it here')
+          home_count_fn()
+          
+        }
+      });
+    }, {
+      root: null,           // viewport
+      threshold: 0.1        // 10% visible
+    });
+
+    // 3. Tell the observer which elements to watch
+    boxes.forEach(box => observer.observe(box));
+
+
+
+
+// end number count
+
+
+
+
+
+// faq home
+
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isOpen = answer.classList.contains('open');
+
+        // Close all open answers
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+        document.querySelectorAll('.eye.close').forEach(a => a.classList.remove('active'));
+        document.querySelectorAll('.eye.open').forEach(a => a.classList.add('active'));
+        document.querySelectorAll('.faq-question').forEach(a => a.classList.remove('active'));
+        
+
+        // Toggle current item
+        if (!isOpen) {
+          answer.classList.add('open');
+            const specials_close = question.querySelector('.eye.close');
+            const specials_open = question.querySelector('.eye.open');
+            question.classList.add('active')
+            specials_open.classList.remove('active')
+            specials_close.classList.add('active')
+
+
+        }
+      });
+    });
+
+
+
+// end faq home
+
 })()
