@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { web_images } from '../../Assets/Images/Web_images/Web_images'
 import '../../Assets/Css/Initial_pages/Home.css'
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import {faCaretRight,faCaretLeft,faAddressCard,faSquareCheck,faPhoneVolume,faLocationDot,faCircleDot,faArrowAltCircleRight,faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faCaretRight,faCaretLeft,faAddressCard,faSquareCheck,faPhoneVolume,faLocationDot,faEyeSlash,faEye,faCircleDot,faArrowAltCircleRight,faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  useNavigate } from 'react-router-dom';
-
+import { products_data } from './Products_data';
 
 
 function Home() {
@@ -252,7 +252,7 @@ function Home() {
 
                             <ul className="check-list">
                                 <li>Steel Plate</li>
-                                <li>Flat Bas</li>
+                                <li>Flat Bars</li>
                                 <li>Welded Mesh</li>
                             </ul>
 
@@ -412,126 +412,27 @@ function Home() {
                     </div>
                     <div className="cards_grid">
 
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product1} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Square Pipes</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
+                       {
+                        products_data.map(item=>(
+                            <div onClick = {()=> navigate_path_btn(`/products/${item.name}`)} class="cont">
+                                    <div class="product-card">
+                                        <div class="product-card__image">
+                                            <img src={item.main_img} alt="Red Nike Shoes"/>
+                                        </div>
+                                        <div class="product-card__info">
+                                        
+                                            <div>
+                                                <h2 class="">{item.name}</h2>
+                                                <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
+                                            </div>
+                                        
+                                        
+                                        </div>
                                     </div>
-                                   
-                                
-                                </div>
                             </div>
-                        </div>
+                        ))
+                       }
 
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product2} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Galvanize Pipes</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
-
-                         <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product3} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Angle Bars</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product5} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Steel Plate</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product4} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Flat Bas</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product6} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Ballustrade Designs</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cont">
-                            <div class="product-card">
-                                <div class="product-card__image">
-                                    <img src={web_images.product7} alt="Red Nike Shoes"/>
-                                </div>
-                                <div class="product-card__info">
-                                  
-                                    <div>
-                                        <h2 class="">Welded Mesh</h2>
-                                        <section><FontAwesomeIcon className='icon' icon = {faArrowAltCircleRight}/></section>
-                                    </div>
-                                   
-                                
-                                </div>
-                            </div>
-                        </div>
 
 
                     </div>
@@ -546,92 +447,98 @@ function Home() {
 
     <div className="home_laser">
 
+        <div className='laser_head'>
+            <h3>  Steel Laser Design</h3>
+            <h2>Precision Laser Cutting for Steel and Plate.</h2>
+            <hr />
+        </div>
+               
+
           
         <div className="home_laser_container">
-               
+
+          
             <div className="laser_content">
 
                 
-             <div className="laser_content_div">
-                  <div className='laser_head'>
-                        <h2> <span>DAV Net</span> Steel Laser Design</h2>
-                        <p>Precision Laser Cutting for Steel and Plate.</p>
-                        <hr />
-                    </div>
 
-                   
-                    <p className='mainp'>
-                      At DAV Net Ent, we don't just cut steel—we bring your 
-                      most complex sheet and plate designs to life with 
-                      unparalleled accuracy and efficiency. Leveraging 
-                      state-of-the-art laser technology, we transform your 
-                      concepts into flawless metal components.Why Choose DAV Net Ent for 
-                      Your Steel Design?
-                    </p>
-
-                    <div className="laser_list">
-
-                       <ul className="laser_list_ul">
-
-                            <li className="laser_list_li">
-
-                                   <span className="laser_list_icon">
-                                    <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
-                                   </span>
-                                    <p>
-                                        <span className='laser_list_inner'>Design-Driven Precision: </span> 
-                                        We specialize in turning intricate CAD files into reality. Our laser 
-                                        machines offer microscopic accuracy, enabling complex geometries and tight tolerances that traditional cutting methods simply can't match.
-                                    </p>
-                                  
-                            </li>
-
-                            <li className="laser_list_li">
-
-                                   <span className="laser_list_icon">
-                                    <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
-                                   </span>
-                                    <p>
-                                        <span className='laser_list_inner'>Speed & Finish: </span> 
-                                        Experience faster turnaround times thanks to automated, high-speed cutting.
-                                         Our lasers deliver clean, smooth, burr-free edges, reducing the need for 
-                                         costly post-processing.
-                                    </p>
-                                  
-                            </li>
+                
+                <div className="laser_content_div">
+                    
 
 
-                            <li className="laser_list_li">
+                        <p className='mainp'>
+                        At <span>DAV-NET ENT</span>, we don't just cut steel—we bring your 
+                        most complex sheet and plate designs to life with 
+                        unparalleled accuracy and efficiency. Leveraging 
+                        state-of-the-art laser technology, we transform your 
+                        concepts into flawless metal components.Why Choose DAV Net Ent for 
+                        Your Steel Design?
+                        </p>
 
-                                   <span className="laser_list_icon">
-                                    <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
-                                   </span>
-                                    <p>
-                                        <span className='laser_list_inner'>Certified Quality: </span> 
-                                        Our laser processing meets the highest industry standard, certified to EN 1090 
-                                        EXC-4 for structural steel, guaranteeing your components are built for 
-                                        excellence.
+                        <div className="laser_list">
+
+                        <ul className="laser_list_ul">
+
+                                <li className="laser_list_li">
+
+                                    <span className="laser_list_icon">
+                                        <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
+                                    </span>
+                                        <p>
+                                            <span className='laser_list_inner'>Design-Driven Precision: </span> 
+                                            We specialize in turning intricate CAD files into reality. Our laser 
+                                            machines offer microscopic accuracy, enabling complex geometries and tight tolerances that traditional cutting methods simply can't match.
+                                        </p>
+                                    
+                                </li>
+
+                                <li className="laser_list_li">
+
+                                    <span className="laser_list_icon">
+                                        <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
+                                    </span>
+                                        <p>
+                                            <span className='laser_list_inner'>Speed & Finish: </span> 
+                                            Experience faster turnaround times thanks to automated, high-speed cutting.
+                                            Our lasers deliver clean, smooth, burr-free edges, reducing the need for 
+                                            costly post-processing.
+                                        </p>
+                                    
+                                </li>
 
 
-                                    </p>
-                                  
-                            </li>
+                                <li className="laser_list_li">
 
-                           
-                       </ul>
+                                    <span className="laser_list_icon">
+                                        <FontAwesomeIcon className='icon' icon = {faSquareCheck}/>
+                                    </span>
+                                        <p>
+                                            <span className='laser_list_inner'>Certified Quality: </span> 
+                                            Our laser processing meets the highest industry standard, certified to EN 1090 
+                                            EXC-4 for structural steel, guaranteeing your components are built for 
+                                            excellence.
 
-                     
-                    </div>
+
+                                        </p>
+                                    
+                                </li>
+
+                            
+                        </ul>
+
+                        
+                        </div>
 
 
-                    <div  className="content_btn">
-                        <button onClick = {()=> navigate_path_btn('/contact-us/')} className='button_trial' >Get in touch <span><FontAwesomeIcon className='icon' icon = {faAddressCard}/></span></button>
-                    </div>
+                        <div  className="content_btn">
+                            <button onClick = {()=> navigate_path_btn('/contact-us/')} className='button_trial' >More details <span><FontAwesomeIcon className='icon' icon = {faAddressCard}/></span></button>
+                        </div>
 
 
 
 
-            </div>
+                </div>
 
             </div>
 
@@ -655,6 +562,294 @@ function Home() {
     </div>
 
     {/* end laser */}
+
+
+
+    
+    {/* home image background */}
+        <div className="home_main_bg">
+            
+            <div className="home_bgimg">
+                
+
+                {/* number counts */}
+
+                <div className="home_counts_div slide_bottom_hidden">
+                    <div class="container">
+
+                    
+                        <div class="counters">
+                            
+                            <div class="counter customer">
+                            <h2 class="number"><span class="home_counter_value" data-value="2015">2015</span></h2>
+                            <p class="detail">Since 2015</p>
+                            
+                            </div>
+                            
+                            <div class="counter project">
+                            <h2 class="number"><span class="home_counter_value" data-value="99">0</span>%</h2>
+                            <p class="detail">Satisfaction Rate</p>
+                            <hr />
+                            </div>
+                            
+                            <div class="counter employee">
+                            <h2 class="number"><span class="home_counter_value" data-value="10">0</span>k+</h2>
+                            <p class="detail">Happy Clients</p>
+                            <hr />
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                {/* end number counts */}
+
+
+                <section>
+
+                    {/* first home message */}
+                    <div className="first_message_div zoom_hidden">
+                        <div className="first_home_message">
+                           <div className="heading">
+                                <hr />
+                                <div>
+                                    <h3>Ready to Build?</h3>
+                                     <h2>Choose Dav-Net Ent for Quality You Can Trust</h2>
+                                </div>
+                                <hr />
+                           </div>
+
+                            <p>
+                                <span>Dav-Net Ent</span> is your single source for quality metals.From robust
+                                Steel Pipes and rust-proof Galvanized Pipe to versatile Flat Bars and security-focused Welded Mesh, we have the durability and variety you need. Plus, elevate your space with our modern
+                                Balustrade Designs!
+
+                            </p>
+
+                            <h4>Shop with confidence. Build with <span>Dav-Net Ent</span>.</h4>
+
+                          
+
+                             <div  className="content_btn">
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')} className='button_trial' >Contact Us <span><FontAwesomeIcon className='icon' icon = {faPhoneVolume}/></span></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {/* end first home message */}
+                </section>
+
+                
+            
+
+            </div>
+        </div>
+    {/* end home image bg */}
+
+
+
+    {/* questions */}
+
+    <div className="home_faq">
+        <div className="faq_contents">
+
+            <div className="faq_heading">
+                <h1>FAQ</h1>
+                <h2>Frequently Asked Questions?</h2>
+            </div>
+            <div className="faq_content">
+               
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <p>
+                              What materials does Dav Net Ent specialize in?
+                            </p>
+                            <span class="eyes">
+                                <FontAwesomeIcon   className='eye open active' icon = {faEye}/>
+                                <FontAwesomeIcon  className='eye close' icon = {faEyeSlash}/>
+                            </span>
+                        </div>
+                    <div class="faq-answer">
+                       We specialize in a wide range of ferrous and non-ferrous metals, 
+                       including Structural Steel (e.g., Angle Bars, Flat Bars, I-Beams), 
+                       Pipes and Tubes (GI Pipes, seamless), Steel Plates, Welded Mesh, and 
+                       specialized metal fabrication (e.g., Balustrade Designs).
+                    </div>
+                    </div>
+
+                     <div class="faq-item">
+                        <div class="faq-question">
+                            <p>
+                                Do you offer custom cutting and fabrication services?
+                            </p>
+                            <span class="eyes">
+                                <FontAwesomeIcon   className='eye open active' icon = {faEye}/>
+                                <FontAwesomeIcon  className='eye close' icon = {faEyeSlash}/>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, absolutely. We provide value-added processing services 
+                            including precision cutting-to-size (sawing, plasma/laser 
+                            cutting), drilling, punching, and custom fabrication 
+                            (welding, bending) to ensure your material is ready for immediate assembly on your site.
+                        </div>
+                    </div>
+
+                     <div class="faq-item">
+                        <div class="faq-question">
+                            <p>
+                                Where does Dav Net Ent deliver?
+                            </p>
+                            <span class="eyes">
+                                <FontAwesomeIcon   className='eye open active' icon = {faEye}/>
+                                <FontAwesomeIcon  className='eye close' icon = {faEyeSlash}/>
+                            </span>
+                        </div>
+                    <div class="faq-answer">
+                        We provide delivery services across
+                         [ Accra, Tema, Kumasi, and surrounding areas]. Contact us to confirm delivery options for locations 
+                        outside our standard delivery zones
+                    </div>
+                    </div>
+
+                    
+                  
+                </div>
+            </div>
+
+        </div>
+
+        <div className="faq_image">
+            <div class="img-container">
+                <img  src={web_images.home5} />
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    {/* end questions */}
+
+
+
+
+    {/* contact us */}
+
+
+     <div className="home_contact">
+        <div className="home_contact_container">
+            <div className="infos">
+
+                
+
+                <div className="infos_row">
+                    <div class="window-container">
+                        <div class="window-bracket window-bracket-top-left"></div>
+                        <div class="window-bracket window-bracket-top-right"></div>
+                        <div class="window-bracket window-bracket-bottom-left"></div>
+                        <div class="window-bracket window-bracket-bottom-right"></div>
+                        <FontAwesomeIcon className='icon' icon = {faPhoneVolume}/>
+                        <h3>Call Us</h3>
+                        <h2>+233 244-697-799/</h2>
+                    </div>
+
+                    <div class="window-container">
+                        <div class="window-bracket window-bracket-top-left"></div>
+                        <div class="window-bracket window-bracket-top-right"></div>
+                        <div class="window-bracket window-bracket-bottom-left"></div>
+                        <div class="window-bracket window-bracket-bottom-right"></div>
+                        <FontAwesomeIcon className='icon' icon = {faEnvelope}/>
+                        <h3>Email Us</h3>
+                        <h2>davnet1563@gmail.com</h2>
+                    </div>
+                </div>
+
+                 <div class="window-container">
+                    <div class="window-bracket window-bracket-top-left"></div>
+                    <div class="window-bracket window-bracket-top-right"></div>
+                    <div class="window-bracket window-bracket-bottom-left"></div>
+                    <div class="window-bracket window-bracket-bottom-right"></div>
+                    <FontAwesomeIcon className='icon' icon = {faLocationDot}/>
+                    <h3>Address</h3>
+                    <h2>Fawode-Kumasi Ghana</h2>
+                </div>
+
+                <div className="map">
+                   
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.930392829774!2d-1.5866222898148286!3d6.778326493190335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdbbe6f525d0d6b%3A0x90b0372af2c72755!2sDav-Net%20Ent.!5e0!3m2!1sen!2sgh!4v1759315227315!5m2!1sen!2sgh"   allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+            <div className="home_forms">
+                  <div class="form-container">
+                        <div class="form-header">
+                            <h2>Get In Touch</h2>
+                            <p>We'd love to hear from you. Send us a message and we'll respond as 
+                                soon as possible.
+                            </p>
+                        </div>
+
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="input-group">
+                                <label for="fullName">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    id="fullName" 
+                                    name="fullName" 
+                                    placeholder="Enter your full name"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="Enter your email address"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="subject">Phone Number</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    placeholder="+223 51 334 5665"
+                                    required
+                                />
+                            </div>
+
+                            <div class="input-group">
+                                <label for="message">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Tell us more about your inquiry or feedback..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div  className="content_btn">
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')} className='button_trial' >Send Message <span><FontAwesomeIcon className='icon' icon = {faPhoneVolume}/></span></button>
+                            </div>
+ 
+                        </form>
+                    </div>
+            </div>
+        </div>
+     </div>
+
+
+    {/* end contact us */}
+
 
 
 

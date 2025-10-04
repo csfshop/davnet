@@ -1,6 +1,6 @@
 import React,{ useEffect } from 'react'
 import { Route,Routes, useLocation } from 'react-router-dom'
-import {Nav_bar,Home,Not_found}  from  '../Web_pages/Initial_pages/Initial_pages'
+import {Nav_bar,Home,Not_found,Footer,Details_page,About_page,Contact_page,Products,Services}  from  '../Web_pages/Initial_pages/Initial_pages'
 import '../Assets/Css/Initial_pages/Web_routes.css'
 import '../Assets/Css/Custom/Transition.css'
 
@@ -51,13 +51,19 @@ function Web_routers() {
      <div className="site-content">
         <Routes>
             <Route path='/' element={<Home/>}/>
-              <Route path='*' element={<Not_found/>}/>
+            <Route path='/about' element={<About_page/>}/>
+            <Route path='/contact-us' element={<Contact_page/>}/>
+            <Route path='/products' element={<Products/>}/>
+             <Route path='/products/:name' element={<Details_page/>}/>
+            <Route path='/services' element={<Services/>}/>
+            <Route path='*' element={<Not_found/>}/>
+
         </Routes>
         
      </div>
 
      <div className="main_footer">
-        {/* <Footer/> */}
+        <Footer/>
      </div>
 
     </div>

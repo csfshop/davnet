@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { Company_name } from '../../Assets/Js/Contants'
 import { web_images } from '../../Assets/Images/Web_images/Web_images'
 import '../../Assets/Css/Initial_pages/Desktop_nav.css'
+import { products_data } from './Products_data'
 
 
 
 function Desktop_nav() {
+
+   const navigate = useNavigate()
+
+
+    const  navigate_path_btn = (path_way) =>{
+        navigate(path_way)
+    }
+
     useEffect(() => {
        const Desktop_SCRIPT_ID = 'dektop-script';
    
@@ -66,32 +75,30 @@ function Desktop_nav() {
         <ul className='menulist' id="menuList">
             <li><NavLink to="/">Home</NavLink></li>
            
-            <li><NavLink to="4">Products</NavLink>
+            <li><NavLink to="/products">Products</NavLink>
               <div className="nav_sublink_1">
                 <div className='nav_sublink_ul'>
-                  <li>Angle bars</li>
+                  {
+                    products_data.map(item=>(
+                      <li  onClick = {()=> navigate_path_btn(`/products/${item.name}`)}>{item.name}</li>
+                    ))
+                  }
                 
                 </div>
               </div>
             </li>
 
-             <li><NavLink to="5">Services</NavLink>
-              <div className="nav_sublink_1">
-                <div className='nav_sublink_ul'>
-                  <li>Metals</li>
-                 
-                  
-                </div>
-              </div>
+             <li><NavLink to="/services">Laser Designs</NavLink>
+             
             </li>
-             <li><NavLink to="/about/">ABOUT</NavLink></li>
+             <li><NavLink to="/about/">About</NavLink></li>
             
-            <li><NavLink to="/contact-us/">CONTACT US</NavLink></li>
+            <li><NavLink to="/contact-us/">Contact Us</NavLink></li>
         </ul>
         
         <div className="button_div">
           
-            <Link to=''><button className='button_trial' >Contact Us</button></Link>
+            <Link to=''><button className='button_trial' >Get In Touch</button></Link>
         </div>
          
       </nav>

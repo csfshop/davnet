@@ -5,12 +5,16 @@ import { web_images } from '../../Assets/Images/Web_images/Web_images'
 import '../../Assets/Css/Initial_pages/Mobile_nav.css'
 import {faBars,faHome,faCircleXmark,faCircleInfo,faList,faBuilding,faAddressCard,faCaretRight,faPlus,faSubtract} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { products_data } from './Products_data'
 
 function Mobile_nav() {
 
     const[subnav_1,setSubnav_1] = useState(false)
     const[subnav_2,setSubnav_2] = useState(false)
+
+
+
+   
 
        useEffect(() => {
              const Mobile_SCRIPT_ID = 'mobile-script';
@@ -72,7 +76,7 @@ function Mobile_nav() {
                 <div className="logo">
                  
                     {/* <img src={web_images.logo} alt="" /> */}
-                    <h3><span>Dav-NET</span> ENT.</h3>
+                    <h3><span>DAV-NET</span> ENT.</h3>
             
                 </div>
               </Link>
@@ -91,8 +95,8 @@ function Mobile_nav() {
                 <div className="logo_items flex">
                    <Link style={{ textDecoration: 'none' }} onClick={mobile_link_click('/')} >
                      <span className="nav_image mobile_nav_link">
-                        <img src={web_images.logo} alt="" />
-                        <h3><span>Dav-NET</span> ENT</h3>
+                        {/* <img src={web_images.logo} alt="" /> */}
+                        <h3><span>DAV-NET</span> ENT</h3>
                     </span>
                    </Link>
                     
@@ -119,23 +123,18 @@ function Mobile_nav() {
                                     <FontAwesomeIcon className='icon xtra right' icon = {subnav_1?faSubtract:faPlus}/>
                                 </div>
                                 <div className={subnav_1?"sidebar_subnav subnav_active":"sidebar_subnav" }>
-                                    <li onClick={mobile_link_click('/')}>Square Pipes</li>
-                                    <li onClick={mobile_link_click('/')}>Galvanized Pipes</li>
-                                    <li onClick={mobile_link_click('/')}>Angle Bars</li>
-                                    <li onClick={mobile_link_click('/')}>Ballustrade Designs</li>
-                                    <li onClick={mobile_link_click('/')}>Steel Plate</li>
+                                   {
+                                    products_data.map(item=>(
+                                        <li onClick={mobile_link_click(`/products/${item.name}`)}>{item.name}</li>
+                                    ))
+                                   }
                                 </div>
                             </div>
-                           <div className="item list">
-                                <div onClick={()=> setSubnav_2(!subnav_2)} to="#" id='sidebar_subnav_div' className="link flex">
+                           <div className="item">
+                                <NavLink onClick={mobile_link_click('/services')}  className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faBuilding}/>
-                                    <span className='text'>Services</span>
-                                    <FontAwesomeIcon className='icon xtra right' icon = {subnav_2?faSubtract:faPlus}/>
-                                </div>
-                                <div className={subnav_2?"sidebar_subnav subnav_active":"sidebar_subnav" }>
-                                   <li>Laser Designs</li>
-                                    
-                                </div>
+                                    <span className='text'>Laser Designs</span>
+                                </NavLink>
                             </div>
 
                              <li className="item">
@@ -149,7 +148,7 @@ function Mobile_nav() {
                                
                                 <div to="#" className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faAddressCard}/>
-                                    <span className='text'>CONTACT US</span>
+                                    <span className='text'>Contact Us</span>
                                 </div>
                             </li>
 

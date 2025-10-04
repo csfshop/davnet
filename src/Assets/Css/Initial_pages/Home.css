@@ -126,7 +126,7 @@
     font-size: 25px;
     font-weight: 650;
     font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
+    font-optical-sizing: auto;
 
 }
 
@@ -1064,7 +1064,7 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 /* products */
 
 .home_products{
-    padding: 100px 0;
+    padding: 30px 0;
 }
 
 .home_products_container{
@@ -1282,27 +1282,32 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 
 
 .home_laser{
-    padding: 30px 0;
+    padding: 10px 0;
     background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 .home_laser_container{
-   max-width: 1000px;
-   width: 90%;
+   max-width: 1400px;
+   width: 95%;
    margin: auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 20px;
 }
 
 .laser_content{
-    width: 100%;
-    margin-bottom: 30px;
+    width: 50%;
+   
 }
 
 .laser_vid{
-    width: 100%;
+    width: 40%;
 
    
 }
 .home_laser .laser_head{
-    position: relative;
+    text-align: center;
+    
 }
 
 .home_laser .laser_head h2{
@@ -1310,54 +1315,45 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
     font-weight: 750px;
     font-family: "Smooch Sans", serif;
     font-optical-sizing: auto;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin: 0;
 
 }
-.home_laser .laser_head span{
-    color: #82181A;
-}
 
-.home_laser .laser_head p{
-    font-size:22px;
-    font-weight:470;
+.home_laser .laser_head h3{
+    font-size:20px;
+    font-weight: 500px;
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
-   
-    font-variation-settings:
-      "wdth" 100;
-    margin-top: -20px;
-    margin-left: 20px;
+    margin: 0;
+    color: #82181A;
+
 }
 
 .home_laser .laser_head hr{
-    position: absolute;
-    height: 70px;
-    width: 5px;
+    height: 5px;
+    width: 100px;
     border-radius: 5px;
     background-color: #82181A;
-    top: 0;
-    left: 0;
-
 }
 
 .laser_content_div .mainp{
-
     font-size:20px;
     font-weight:350;
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
-    margin-left: 20px;
+   
 
 }
 
+.laser_content_div .mainp span{
+    color: #82181A;
+    font-weight: 400;
+
+}
 
 .laser_list_ul{
     list-style: none;          /* remove default bullets */
     padding: 0;
-    
-    
 }
 
 .laser_list_ul li{
@@ -1371,49 +1367,85 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
     font-size: 20px;
     position: absolute;
 }
+
 .laser_list_ul li p{
     font-size:18px;
     font-weight:300;
     font-family: "Roboto", serif;
     margin-left: 40px;
 }
+
 .laser_list_inner{
     color: #82181A;
     font-weight: 600;
 
 }
 
-
-
-
-
 .laser_vid_div video{
     width: 100%;
-    height: 400px;
+    height: 450px;
     margin: auto;
     display: block;
     object-fit: cover;
-    /* box-shadow: 0 1rem 0 black, 0 0 0 1rem white; */
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 10px;
+}
 
+
+@media screen and (max-width: 1000px){
+
+    .laser_content_div .mainp{
+    font-size:18px;
+   
+   
+
+}
+    .laser_vid_div video{
+  
+    height: 500px;
+    
+}
 
 }
 
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 900px){
+
+    .home_laser_container{
+        max-width: 800px;
+        width: 90%;
+        margin: auto;
+        display: block;
+   
+    }
+
+
+    .laser_content{
+    width: 100%;
+    margin-bottom: 30px;
+   
+    }
+
+    .laser_vid{
+        width: 100%;
+
+    
+    }
+
+
     .laser_vid_div video{
   
-    height: 300px;
+    height: 500px;
     
 
 
 }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 700px){
     .laser_vid_div video{
   
-    height: 250px;
+    height: 400px;
     
 
 
@@ -1435,13 +1467,7 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 }
 
 .home_laser .laser_head hr{
-    position: absolute;
-    height: 50px;
-    width: 5px;
-    border-radius: 5px;
-    background-color: #82181A;
-    top: 0;
-    left: 0;
+  width: 70px;
 
 }
 
@@ -1456,5 +1482,1147 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 }
 
 
+@media screen and (max-width: 500px){
+    .laser_vid_div video{
+  
+    height: 350px;
+    
+
+
+}
+
+.home_laser .laser_head h3{
+    font-size:18px;
+    
+
+}
+
+
+.home_laser .laser_head h2{
+    font-size:25px;
+    font-weight: 750px;
+  
+
+}
+
+.home_laser .laser_head p{
+    font-size:17px;
+ 
+}
+
+.home_laser .laser_head hr{
+  width: 70px;
+
+}
+
+
+.laser_content_div .mainp{
+
+    font-size:17px;
+    
+
+}
+
+}
+
+
+
+@media screen and (max-width: 360px){
+    .laser_vid_div video{
+  
+    height: 330px;
+    
+
+
+}
+
+.home_laser .laser_head h3{
+    font-size:17px;
+    
+
+}
+
+
+.home_laser .laser_head h2{
+    font-size:20px;
+    font-weight: 750px;
+  
+
+}
+
+.home_laser .laser_head p{
+    font-size:17px;
+ 
+}
+
+.home_laser .laser_head hr{
+  width: 70px;
+
+}
+
+
+.laser_content_div .mainp{
+
+    font-size:17px;
+    
+
+}
+
+}
+
 
 /* end laser */
+.home_main_bg{
+    padding: 30px 0px;
+    margin-top: 50px;
+}
+
+.home_bgimg section {    
+    margin-top: 70px;
+    background-size: cover;       /* Ensures the image covers the container */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    /* Optionally, include: */
+    image-rendering: auto;
+    /* filter: brightness(60%); */
+    max-height: fit-content;
+    padding: 70px 0 20px 0;
+    min-width:fit-content;
+  
+    /* scroll */
+    background-attachment: fixed;
+}
+
+/* You need to use background-image but not "background" */
+.home_bgimg section:nth-child(2) {
+   
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../../Images/Web_images/home2.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
+
+
+.home_bgimg section:nth-child(4) {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../../Images/Web_images/who_img2.JPG');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 2% 0% 8% 0%;
+}
+
+
+
+
+/* number counts */
+
+/* Custom CSS */
+.home_counts_div .container {
+  width: 100%;
+  min-height: fit-content;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: -150px;
+  
+}
+
+
+
+.home_counts_div .container .counters {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+  grid-template-rows: repeat(1, 1fr);     /* 2 equal rows */
+  gap: 0; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+  background-image:url('../../Images/Web_images/count.jpg') ;  
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+                            
+}
+
+.home_counts_div .counters .counter {
+  position: relative;
+  width: 100%;
+  /* background-color: #fff; */
+  color: #000;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 7px 7px;
+  
+  
+  
+}
+.home_counts_div .counters .counter:hover {
+   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  transform: translateY(-5px);
+}
+
+
+
+.home_counts_div .counters .counter .number {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+
+}
+
+
+
+
+.home_counts_div .counters .counter .detail {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  color: whitesmoke;
+}
+
+.home_counts_div .counters .counter hr{
+  position: absolute;
+  top: 0;
+  border: none;               /* remove default */
+  border-left: 3px dashed #82181A;
+  height: 100%;
+  width: 0;                   /* force vertical orientation */
+  margin: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+  .home_counts_div .counters .counter {
+ 
+  padding: 10px 10px;
+  ;
+  
+  
+}
+
+
+
+.home_counts_div .counters .counter .detail {
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  color: whitesmoke;
+}
+
+
+}
+
+@media (max-width: 700px) {
+
+
+
+  .home_counts_div .container {
+  
+    margin-bottom: 30px;
+
+  
+}
+
+  
+.home_counts_div .container .counters {
+  
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);  /* 3 equal columns */
+  grid-template-rows: repeat(1, 1fr); 
+  max-width: 600px;    /* 2 equal rows */
+ 
+    
+                            
+}
+
+.home_counts_div .counters .counter {
+  position: relative;
+  /* width: 100%; */
+  /* background-color: #fff; */
+  
+  padding: 10px 10px;
+
+ 
+  
+  
+}
+
+
+
+.home_counts_div .counters .counter .detail {
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+.home_counts_div .counters .counter .number {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+
+}
+
+
+.home_counts_div .counters .counter hr{
+  position: absolute;
+  top: 0;
+  left: 15%;
+  border: none;               /* remove default */
+  border-bottom: 3px dashed #82181A;
+  height: 0%;
+  width: 60%;                   
+ 
+}
+
+
+}
+
+
+
+@media (max-width: 400px) {
+
+  
+
+
+.home_counts_div .counters .counter {
+
+  padding: 10px 5px;
+ 
+}
+
+
+
+.home_counts_div .counters .counter .detail {
+  font-size: 17px;
+  font-weight: 700;
+  
+}
+
+
+.home_counts_div .counters .counter hr{
+  position: absolute;
+  top: 0;
+  left: 15%;
+  border: none;               /* remove default */
+  border-bottom: 3px dashed #82181A;
+  height: 0%;
+  width: 60%;                   
+ 
+}
+
+
+}
+
+
+/* end number counts */
+
+
+
+
+
+/* first message */
+.first_message_div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.first_home_message{
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  
+  
+}
+
+.first_home_message .heading{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.first_home_message .heading hr{
+    width: 50px;
+    height: 3px;
+    background-color: #E1712B;
+    border-radius: 10px;
+    border-color:#E1712B;
+    margin: 0;
+    padding: 0 20px;
+    
+
+}
+.first_home_message .heading h3{
+  font-size: 22px;
+  font-weight: 600;
+  color: #E1712B;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  margin: 0;
+
+
+  
+}
+
+.first_home_message .heading h2{
+  font-size: 40px;
+  color: white;
+   font-weight: 750;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+.first_home_message p{
+    font-size: 20px;
+    font-weight:350;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    color: white;
+    text-align: left;
+
+}
+
+
+.first_home_message  h4{
+  font-size: 30px;
+  color: #E1712B;
+   font-weight: 750;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.first_home_message  span{
+  color: white;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+
+.first_home_message .heading h3{
+  font-size: 20px;
+  
+
+
+  
+}
+
+.first_home_message .heading h2{
+  font-size: 30px;
+ 
+}
+
+
+.first_home_message p{
+    font-size: 18px;
+  
+
+}
+
+ 
+
+
+  
+
+
+}
+
+
+
+@media screen and (max-width: 700px){
+
+    .first_home_message .heading hr{
+    width: 30px;
+    height: 3px;
+   
+    padding: 0 20px;
+    
+
+}
+
+.first_home_message .heading h3{
+  font-size: 20px;
+  
+
+
+  
+}
+
+.first_home_message .heading h2{
+  font-size: 25px;
+ 
+}
+
+
+.first_home_message p{
+    font-size: 18px;
+  
+
+}
+
+
+.home_main_bg{
+    padding: 30px 0px;
+}
+
+.home_bgimg section {    
+    margin-top: 0px;
+   
+    padding: 20px 0 20px 0;
+    
+  
+   
+}
+ 
+
+
+  
+
+
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    .first_home_message .heading hr{
+    width: 20px;
+    height: 3px;
+    padding: 0 10px;
+    
+
+}
+
+.first_home_message .heading h3{
+  font-size: 18px;
+  
+
+
+  
+}
+
+.first_home_message .heading h2{
+  font-size: 22px;
+ 
+}
+
+
+.first_home_message p{
+    font-size: 16px;
+  
+
+}
+.first_home_message  h4{
+    font-size: 23px;
+}
+
+.home_main_bg{
+    padding: 30px 0px;
+}
+
+.home_bgimg section {    
+    margin-top: 0px;
+   
+    padding: 10px 0 10px 0;
+    
+  
+   
+}
+ 
+
+
+  
+
+
+}
+
+
+
+@media screen and (max-width: 370px){
+
+    .first_home_message .heading hr{
+    width: 15px;
+   
+    
+
+}
+
+.first_home_message .heading h3{
+  font-size: 18px;
+  
+
+}
+
+
+.first_home_message  h4{
+    font-size: 20px;
+}
+
+
+ 
+
+
+  
+
+
+}
+
+
+
+
+
+
+
+/* end first message */
+
+
+
+
+
+/* questions */
+
+  .home_faq{
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* aligns items horizontally */
+    margin: auto;
+    max-width: 1300px;
+    padding: 40px 0px;
+   
+  
+  }
+
+  .home_faq .faq_heading{
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .home_faq .faq_heading h1{
+   font-size: 30px;
+   font-weight: 800;
+   font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  color: #82181A;
+   
+  }
+
+  .home_faq .faq_heading h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: -10px;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+   
+  }
+
+
+ 
+
+  .home_faq .faq_contents {
+    width: 50%;   
+    
+  }
+
+ .faq-container {
+      width: 100%;
+      overflow: hidden;
+      margin: auto;
+      background-color: white;
+    }
+
+    .faq-item {
+      margin-bottom: 30px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background-color:white;
+      transition: background-color 0.3s ease;
+      padding: 0 20px;
+      
+
+    }
+
+    .faq-question.active{
+      background-color: #82181A;
+      color: white;
+    }
+
+   
+    .faq-question p{
+      font-size: 18px;
+      font-weight: 700;
+      font-family: "Roboto", serif;
+      font-optical-sizing: auto;
+
+    }
+
+      .faq-question .eye {
+      font-size: 20px;
+      display: none;
+
+    }
+
+    .faq-question .eye.active{
+      display: block;
+    }
+
+  
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      font-size: 18px;
+      line-height: 1.6;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      
+    }
+
+    .faq-answer.open {
+      /* Adjust for longer answers */
+      max-height: fit-content;
+      padding: 15px 20px;
+      margin-bottom: 40px;
+      border-bottom: 5px solid #82181A;
+   
+    }
+
+
+    
+    .home_faq .faq_image {
+    
+      width: 40%;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      height: 400px;
+
+    }
+
+
+
+
+    .faq_image .img-container {
+      width: 100%; 
+      height: 100%;
+      filter: drop-shadow(0 0 0.6rem #1a1a1a);
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      box-sizing: border-box;
+
+     
+  
+      
+      }
+
+      .faq_image .img-container img {
+        width: 100%; /*adjusts the image to fit to the container*/
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+  
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+
+       .home_faq{
+          width: 90%;
+          display: block;
+          margin: auto;
+          max-width: 800px;
+          padding: 40px 0px;
+        
+        
+        }
+
+
+      .home_faq .faq_contents {
+        width: 100%;   
+        
+      }
+
+
+      .home_faq .faq_image {
+    
+        width: 100%;
+        height: 500px;
+      
+
+      }
+     
+    }
+
+    @media (max-width: 400px) {
+      .faq-question p{
+      font-size: 16px;
+      font-weight: 700;
+     
+
+    }
+
+    .faq-question .eye {
+      font-size: 18px;
+      
+
+    }
+
+     .faq-answer {
+     
+      font-size: 16px;
+     
+      
+    }
+
+       .home_faq .faq_image {
+    
+        width: 100%;
+        height: 300px;
+      
+
+      }
+      
+    }
+
+
+
+
+
+
+
+
+
+
+/* end questions */
+
+
+
+
+
+
+/* home contact */
+.home_contact{
+    padding: 30px 0px;
+}
+
+.home_contact_container{
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: auto;
+
+}
+.home_contact_container .infos{
+    width: 47%;
+}
+
+.home_contact_container .home_forms{
+    width: 45%;
+}
+
+
+.home_contact_container .infos_row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.window-container {
+  position: relative;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100%;
+  background: white;
+  border: 1px solid #b71114; /* 3 */
+  padding:30px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.home_contact_container .infos_row .window-container{
+    width: 48%;
+   
+}
+
+
+.window-bracket {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+}
+
+.window-bracket-top-left {
+  border-top: 4px solid #82181A; /* 4 */
+  border-left: 4px solid #82181A;
+  top: 0;
+  left: 0;
+}
+
+.window-bracket-top-right {
+  border-top: 4px solid #82181A;
+  border-right: 4px solid #82181A;
+  top: 0;
+  right: 0;
+}
+
+.window-bracket-bottom-right {
+  border-bottom: 4px solid #82181A;
+  border-right: 4px solid #82181A;
+  bottom: 0;
+  right: 0;
+}
+
+.window-bracket-bottom-left {
+  border-bottom: 4px solid #82181A;
+  border-left: 4px solid #82181A;
+  bottom: 0;
+  left: 0;
+}
+
+
+.window-container .icon{
+    font-size: 25px;
+    color: #82181A;
+    border: 3px dashed #b71114;
+    border-radius: 50%;
+    padding: 15px;
+    
+}
+.window-container h3{
+    margin:0 auto;
+    font-size:30px;
+    font-weight: 750px;
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    word-break: break-all;
+     width: 97%;
+     text-align: center;
+
+}
+
+.window-container h2{
+
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    margin: auto;
+    word-break: break-all;
+    width: 97%;
+    text-align: center;
+}
+
+
+
+
+ .form-container {
+        background: linear-gradient(181.2deg, white 20.5%, #82181A 76.8%);
+        width: 90%;
+        padding: 20px 5%;
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        position: relative;
+        }
+
+        /* Form header */
+        .form-header {
+            
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size:40px;
+            font-weight: 750px;
+            font-family: "Smooch Sans", serif;
+            font-optical-sizing: auto;
+            margin: 0;
+            padding-bottom: 10px;
+            
+        }
+
+        .form-header p {
+            font-size: 18px;
+            color: black;
+            font-family: "Roboto", serif;
+            font-optical-sizing: auto;
+            margin: auto;
+        }
+
+        /* Form styling */
+       
+
+        /* Input group styling */
+        .input-group {
+           margin-bottom: 30px;
+
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-weight: 500;
+            color: black;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Input and textarea base styling */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 14px 5%;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background-color: white;
+            color: black;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        /* Input focus states */
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #b71114;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(85, 85, 85, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Textarea specific styling */
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+            line-height: 1.5;
+        }
+
+        /* Placeholder styling */
+        input::placeholder,
+        textarea::placeholder {
+            color: #666;
+            font-style: italic;
+        }
+        .home_contact_container  .map iframe{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        
+        }
+     
+
+
+    
+        /* Large screen optimizations */
+        @media (max-width: 1100px) {
+            .home_contact_container{
+                width: 90%;
+                max-width: 800px;
+                display: block;
+                
+                margin: auto;
+
+            }
+            .home_contact_container .infos{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            .home_contact_container .home_forms{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+         
+        }
+
+
+
+         @media (max-width: 1100px) {
+           
+                .home_contact_container .infos_row{
+                    display: block;
+                
+                }
+
+                .home_contact_container .infos_row .window-container{
+                    width: 100%;
+                
+                }
+
+         
+        }
+
+
+
+           @media (max-width: 500px) {
+           
+                .form-header h2 {
+                    font-size:30px;
+                
+                    
+                }
+
+                .form-header p {
+                    font-size: 16px;
+                    
+                }
+
+
+         
+        }
+
+
+            @media (max-width: 400px) {
+           
+
+                .form-header p {
+                    font-size: 14px;
+                    
+                }
+
+
+         
+        }
+       
+/* end home contact */
